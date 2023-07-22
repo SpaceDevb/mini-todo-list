@@ -1,0 +1,182 @@
+html {
+    font-size: 16px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(#666, #999);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr {
+    border: 1px solid slateblue;
+}
+
+.main {
+    width: 70%;
+    min-height: 100vh;
+    background-color: #333;
+    color: rgb(159, 149, 223);
+    text-align: center;
+}
+.header {
+    background-color: #eee;
+}
+
+.header h1 {
+    margin: 1rem;
+    margin-top: 0;
+    padding-top: 1rem;
+    font-size: 3.7rem;
+    color: slateblue;
+}
+
+input {
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid darkslateblue;
+    border-radius: 15px;
+    width: 250px;
+}
+
+.header button {
+    background-color: #666;
+    color: #eee;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.header button > * {
+    margin-left: 0.6rem;
+}
+
+.header button::before,
+.header button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    position: absolute;
+    background-color: slateblue;
+    transition: width 0.5s ease-in-out;
+    border-radius: 15px;
+}
+
+.header button::before {
+    left: 50%;
+}
+
+.header button::after {
+    right: 50%;
+}
+
+.header button:hover::before,
+.header button:hover::after {
+    width: 50%;
+}
+
+.header button:hover {
+    background-color: #eee;
+    color: slateblue;
+}
+
+/* Estilos de la seccion de TODOS */
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todos .todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 768px;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.todo p {
+    font-size: 1.1rem;
+    color: #eee;
+    /* text-decoration: line-through;
+    color: lightgreen; */
+    max-width: 30vw;
+    max-height: 70px;
+    overflow: hidden;
+}
+
+.todo button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid slateblue;
+    background-color: #333;
+    color: #eee;
+    cursor: pointer;
+    transition: border 0.3s ease-in;
+}
+
+.todo button.check:hover {
+    border: 2px solid lightgreen;
+}
+
+.todo button.edit:hover {
+    border: 2px solid lightsalmon;
+}
+
+.todo button.delete:hover {
+    border: 2px solid crimson;
+}
+
+.todo .change-buttons {
+    display: flex;
+}
+
+.change-buttons button {
+    margin: 0 0.5rem;
+}
+
+.todo .task-name {
+    display: flex;
+    align-items: center;
+}
+
+.todo .task-name input {
+    margin: 0 1rem;
+    border-radius: 5px;
+    background-color: #444;
+    border: none;
+    color: #eee;
+}
+
+.todo .task-name .add:hover {
+    background-color: #eee;
+    color: #222;
+}
